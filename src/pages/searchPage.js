@@ -106,14 +106,14 @@ class SearchPage extends Component {
           <h1>Find your favorite song</h1>
 
           <form>
+            <div className="searchicon">
+              <i className="fas fa-search"></i>
+            </div>
             <input
               type="text"
               onChange={this.handleChange}
-              placeholder="Find your music here..."
+              placeholder="Enter what you want to search here..."
             />
-            <button>
-              <i className="fas fa-search"></i> Search
-            </button>
           </form>
         </div>
 
@@ -137,7 +137,7 @@ class SearchPage extends Component {
           {resultTracks.length === 0 && resultArtists.length === 0 && (
             <Fragment>
               <div className="center">
-                <p>Search some thing!</p>
+                <p>Let's search some thing!</p>
               </div>
             </Fragment>
           )}

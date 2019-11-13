@@ -156,7 +156,7 @@ input {
   box-shadow: none;
   background: transparent;
   border: none;
-  border-bottom: 1px solid $lightblue;
+  border-bottom: 1px solid $link;
   font-size: 1.17em;
   font-weight: 600;
   letter-spacing: 1px;
@@ -190,6 +190,14 @@ button {
     border-color: $link;
     color: $link;
   }
+}
+
+.searchicon {
+  font-size: 1.2em;
+  vertical-align: sub;
+  color: $link;
+  display: inline-block;
+  margin-right: 1em;
 }
 
 .search {
