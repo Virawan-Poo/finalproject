@@ -18,10 +18,15 @@ const hanndleFavorite = (e, item) => {
 };
 
 const checkFavorite = id => {
+  let response = {};
   let favoriteData = localStorage.getItem("favorites");
   if (favoriteData) {
     favoriteData = JSON.parse(favoriteData);
+    if (favoriteData.length > 0) {
+      response = favoriteData.filter(value => value.id === id);
+    }
   }
-  return favoriteData.filter(value => value.id === id);
+
+  return response;
 };
 export { hanndleFavorite, checkFavorite };
