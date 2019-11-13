@@ -1,0 +1,213 @@
+$white: #ffffff;
+$link: #ff5eaf;
+$link2: #ec2589;
+$blue: #697398;
+$lightblue: #95a6d1;
+
+body {
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  background: #181a1f;
+  color: $white;
+
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 5px;
+  margin: 1.5em 0 0.5em;
+}
+
+h2 {
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  margin-top: 4em;
+  color: $blue;
+}
+
+h3 {
+  font-size: 1em;
+  line-height: 1.2em;
+  margin-bottom: 5px;
+  margin: 3px 0;
+}
+
+p {
+  font-size: 0.9em;
+  margin: 0;
+  display: inline-block;
+  color: $lightblue;
+}
+
+.center {
+  display: block;
+  text-align: center;
+}
+
+.issue {
+  margin-top: 30vh;
+
+  h1 {
+    text-transform: none;
+  }
+
+  h2 {
+    margin-top: 2em;
+    font-size: 1em;
+  }
+}
+
+.music-app {
+  display: flex;
+}
+
+.category {
+  width: 250px;
+  height: 100vh;
+  background: #22262f;
+
+  ul {
+    list-style: none;
+    margin: 0 20px;
+    padding: 0;
+  }
+
+  li {
+    font-size: 1rem;
+    margin: 1.5em 0;
+    cursor: pointer;
+
+    i {
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        color: $link;
+      }
+    }
+
+    &.active {
+      a {
+        color: $link;
+      }
+    }
+  }
+}
+
+.musiclist {
+  width: calc(100% - 250px);
+  height: 100vh;
+  padding-left: 3em;
+  padding-right: 3em;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.track-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.track {
+  width: 190px;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.favbtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 45px;
+  background: #181a1f;
+  color: #353a48;
+  &:hover {
+    color: $link;
+  }
+
+  &.active {
+    color: $link2;
+  }
+}
+
+input {
+  height: 36px;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid $lightblue;
+  font-size: 1.17em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: $link;
+}
+
+::placeholder {
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: $blue;
+}
+
+button {
+  width: 130px;
+  height: 36px;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  box-shadow: none;
+  color: $lightblue;
+  border: 2px solid $lightblue;
+  background: transparent;
+
+  &:hover {
+    border-color: $link;
+    color: $link;
+  }
+}
+
+.search {
+  text-align: center;
+
+  input {
+    width: 350px;
+    margin: 2em 0;
+  }
+
+  button {
+    margin-left: 1em;
+  }
+}
+
+.result {
+  h2 {
+    border-bottom: 1px solid $blue;
+    padding-bottom: 0.3em;
+  }
+}

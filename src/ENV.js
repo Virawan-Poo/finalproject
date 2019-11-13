@@ -1,0 +1,7 @@
+const clientId = `c240d1a4a5b841e48ebbf74625366027`;
+
+const clientSecret = `f7edf5febdff47588a31495edbb6df7f`;
+
+const accessToken = `BQBt60rDcTuBY9olCY_zoi83Ypc3LaDVQBIriwm4gkZBsBaudoqWujoFCV-jYCD0_6sU_P6phom9waN5l-85yVkp_fluG1ciejZQdquTQ3RfErrmw6NcxU3OTa6PyYW6hs86pfVohHKawnLgADyDrP_Dl_dMUsI7TyGQ35MuAglsHCxQJrgcuzDgs0naHBKGRyNl9Rg7gMzBRh1FvBD2zy7BkITfuW8417AB78lu7aXDBMlD1AKRK2qNCIqZkc8q0F9WrsRRIQh8v8dx48VedHTPaKtZ70dwyw`;
+
+export { clientId, clientSecret, accessToken };
