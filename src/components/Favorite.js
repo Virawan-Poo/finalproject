@@ -26,7 +26,7 @@ class Favorite extends Component {
 
   renderFavorite = favorites => {
     const renderTrack = favorites.map(track => {
-      const { id, image, name, artist } = track;
+      const { id, image, name, artist, url } = track;
       return (
         <Track
           key={id}
@@ -34,6 +34,7 @@ class Favorite extends Component {
           image={image}
           name={name}
           artist={artist}
+          url={url}
           hanndleFavoritesWithRefresh={this.hanndleFavoritesWithRefresh}
         />
       );
@@ -44,6 +45,7 @@ class Favorite extends Component {
 
   render() {
     const { favorites } = this.state;
+
     return (
       <Fragment>
         {favorites.length > 0 ? (

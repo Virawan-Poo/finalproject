@@ -23,6 +23,7 @@ class App extends Component {
 
   render() {
     const { cuurentPath } = this.state;
+
     return (
       <div className="music-app">
         <Router>

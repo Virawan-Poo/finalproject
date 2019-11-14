@@ -19,10 +19,21 @@ class Track extends Component {
     e.stopPropagation();
   };
 
+  handleDetail = (e, url) => {
+    e.stopPropagation();
+    window.open(url, "_blank");
+  };
+
   render() {
-    const { id, image, name, artist } = this.props;
+    const { id, image, name, artist, url } = this.props;
     return (
-      <div className="track" key={id}>
+      <div
+        className="track"
+        key={id}
+        onClick={e => {
+          this.handleDetail(e, url);
+        }}
+      >
         <div
           className={"favbtn " + (this.state.isFave ? "active" : "")}
           onClick={e => {

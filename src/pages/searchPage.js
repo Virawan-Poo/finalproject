@@ -54,7 +54,8 @@ class SearchPage extends Component {
         id,
         album: { images },
         name,
-        artists
+        artists,
+        external_urls
       } = track;
 
       let imagesUrl = imageDefault;
@@ -69,6 +70,7 @@ class SearchPage extends Component {
           image={imagesUrl}
           name={name}
           artist={artists[0].name}
+          url={external_urls.spotify}
           handleDetail={this.props.handleDetail}
         />
       );
@@ -78,7 +80,7 @@ class SearchPage extends Component {
 
   renderResultArtists = albums => {
     const renderArtists = albums.map(artist => {
-      const { id, images, name } = artist;
+      const { id, images, name, external_urls } = artist;
 
       let imagesUrl = imageDefault;
       if (images && images.length > 0) {
@@ -91,6 +93,7 @@ class SearchPage extends Component {
           id={id}
           image={imagesUrl}
           name={name}
+          url={external_urls.spotify}
           handleDetail={this.props.handleDetail}
         />
       );

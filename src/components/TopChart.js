@@ -30,7 +30,8 @@ class TopChart extends Component {
         id,
         album: { images },
         name,
-        artists
+        artists,
+        external_urls
       } = track;
       return (
         <Track
@@ -39,6 +40,7 @@ class TopChart extends Component {
           image={images[1].url}
           name={name}
           artist={artists[0].name}
+          url={external_urls.spotify}
           handleDetail={this.props.handleDetail}
         />
       );

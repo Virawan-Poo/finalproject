@@ -27,7 +27,7 @@ class NewReleases extends Component {
 
   renderNewReleases = albums => {
     const renderTrack = albums.map(track => {
-      const { id, images, name, artists } = track;
+      const { id, images, name, artists, external_urls } = track;
       return (
         <Track
           key={id}
@@ -35,6 +35,7 @@ class NewReleases extends Component {
           image={images[1].url}
           name={name}
           artist={artists[0].name}
+          url={external_urls.spotify}
           handleDetail={this.props.handleDetail}
         />
       );
